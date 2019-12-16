@@ -1,0 +1,10 @@
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\bin\Debug\ZayacNormProjectimho.exe.config
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\bin\Debug\ZayacNormProjectimho.exe
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\bin\Debug\ZayacNormProjectimho.pdb
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.csprojAssemblyReference.cache
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.Form1.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.Properties.Resources.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.csproj.GenerateResource.cache
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.exe
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.pdb
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.Form2.resources
