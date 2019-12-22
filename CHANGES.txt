@@ -1,0 +1,28 @@
+From4.cs:
+	//X-avr, Y-avr
+    double AvrX = Hx * u1;
+    double AvrY = Hy * v1;
+
+    
+
+    //S(x)^2 and S(y)^2
+    double sx2 = Hx * Hx * u2;
+    double sy2 = Hy * Hy * v2;
+
+    double sx = Math.Sqrt(sx2);
+    double sy = Math.Sqrt(sy2);
+
+Task3.cs:
+	public double[,] databaseX = new double[7, 6];
+    public double Mx, Gx;
+
+Function_Laplace:
+	double func_laplace(double a, double precision){
+	    double result = 0;
+	    for (double i = 0; i < a; i+=precision){    
+	    	//здесь где то ошибка, нужно минус поставить где то    
+	        result += precision*fabs(pow(M_E,-.5*pow(i,2))+pow(M_E,.5*pow((i+precision),2)))/2.0;   
+	    }
+	    result *= 1.0/pow(2*M_PI,.5);
+	    return result;
+	}

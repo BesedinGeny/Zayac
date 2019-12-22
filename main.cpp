@@ -103,7 +103,13 @@ int main()
         cout << i + 1 << "\t" << _out << endl;
     }
 
+    //2 часть ---------------------------------------
 
+    int dataBase2Chapter[7][6];
+
+    int
+
+    //3 часть
 
     return 0;
 }
