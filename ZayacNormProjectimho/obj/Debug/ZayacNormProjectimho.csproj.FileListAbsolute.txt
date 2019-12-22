@@ -8,3 +8,5 @@ C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\
 C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.exe
 C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.pdb
 C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.Form2.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.Form3.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\ZayacNormProjectimho\ZayacNormProjectimho\obj\Debug\ZayacNormProjectimho.Form4.resources

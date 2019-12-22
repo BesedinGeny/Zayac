@@ -13,6 +13,8 @@ namespace ZayacNormProjectimho
 {
     public partial class Form1 : Form
     {
+
+        public double[,] dataBase = new double[7, 6];
         public string name; // имя используещегося файла
         
         public Form1()
