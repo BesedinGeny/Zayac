@@ -19,6 +19,8 @@ namespace Zaychik
             InitializeComponent();
         }
 
+        public bool doY = false;
+
         private void HipotesyX_FormClosed(object sender, FormClosedEventArgs e)
         {
             // GlobalVars.FormHipotesyX = false;
@@ -39,85 +41,164 @@ namespace Zaychik
              tip[5].SetCustomToolTip(label7, "a_label.png");
              tip[6].SetCustomToolTip(label2, "mk1_label.png");
              */
-             
-            for (int i = 0; i < Program.r; i++)
+            if (!doY)
             {
-                raspredX.Rows.Add();
-
-                raspredX.Rows[i].Cells[0].Value = i + 1; // i
-
-
-                if (i == Program.r - 1)
+                for (int i = 0; i < Program.r; i++)
                 {
-                    raspredX.Rows[i].Cells[1].Value = "[" + MainForm.calc.inter_X[i].getF() + ";" + "+∞" + ")";
-                }
-                else
-                    if (i == 0)
-                {
-                    raspredX.Rows[i].Cells[1].Value = "(" + "-∞" + ";" + MainForm.calc.inter_X[i].getS() + ")"; //interval
-                }
-                else
-                    raspredX.Rows[i].Cells[1].Value = "[" + MainForm.calc.inter_X[i].getF() + ";" + MainForm.calc.inter_X[i].getS() + ")";
+                    raspredX.Rows.Add();
 
-                raspredX.Rows[i].Cells[2].Value = MainForm.calc.inter_X[i].getN(); //Ni
-
-                raspredX.Rows[i].Cells[3].Value = String.Format("{0:0.00}", MainForm.calc.norm_vel_X[i]); // Zi
-
-                raspredX.Rows[i].Cells[4].Value = String.Format("{0:0.000}", MainForm.calc.form_lap_X[i]); // laplac
-
-                raspredX.Rows[i].Cells[5].Value = String.Format("{0:0.000}", MainForm.calc.ver_sob_X[i]); // pi     
-
-                raspredX.Rows[i].Cells[6].Value = String.Format("{0:0.00}", MainForm.calc.teor_chast_X[i]); // answ
-
-                raspredX.Rows[i].Cells[7].Value = 0;
-
-            }
-
-            int k = 0;
-            int j = 0;
-
-            int[,] masdef = new int[5, 7];
-            int[] answ = new int[5];
-            // raspredInitX.Rows[i].Cells[0].Value = (k + 1).ToString();
-            for (int i = 0; i < MainForm.calc.d_X; i++)
-            {
-                int p = 0;
-                //raspredInitX.Rows.Add();
-                masdef[i, p++] = k;
-                char count = MainForm.calc.flags_X[k];
-                char step = (char)1;
-                //raspredInitX.Rows[i].Cells[0].Value = (k + 1).ToString();
-
-                while (count != 0)
-                {
-                    masdef[i, p++] = k + step++;
-                    count--;
-                }
-                k += step;
-               // j++;
-            }
+                    raspredX.Rows[i].Cells[0].Value = i + 1; // i
 
 
-            for (int i = 0; i < 5; i++)
-            {
-                for (int t = 0; t < 6; t++)
-                {
-                   // if ((masdef[i,t] != 0)&& (masdef[i,t+1] == 0))
-                    if (masdef[i, t + 1] == 0)
+                    if (i == Program.r - 1)
                     {
-                        answ[i] = masdef[i,t];
-                        break;
+                        raspredX.Rows[i].Cells[1].Value = "[" + MainForm.calc.inter_X[i].getF() + ";" + "+∞" + ")";
+                    }
+                    else
+                        if (i == 0)
+                    {
+                        raspredX.Rows[i].Cells[1].Value = "(" + "-∞" + ";" + MainForm.calc.inter_X[i].getS() + ")"; //interval
+                    }
+                    else
+                        raspredX.Rows[i].Cells[1].Value = "[" + MainForm.calc.inter_X[i].getF() + ";" + MainForm.calc.inter_X[i].getS() + ")";
+
+                    raspredX.Rows[i].Cells[2].Value = MainForm.calc.inter_X[i].getN(); //Ni
+
+                    raspredX.Rows[i].Cells[3].Value = String.Format("{0:0.00}", MainForm.calc.norm_vel_X[i]); // Zi
+
+                    raspredX.Rows[i].Cells[4].Value = String.Format("{0:0.000}", MainForm.calc.form_lap_X[i]); // laplac
+
+                    raspredX.Rows[i].Cells[5].Value = String.Format("{0:0.000}", MainForm.calc.ver_sob_X[i]); // pi     
+
+                    raspredX.Rows[i].Cells[6].Value = String.Format("{0:0.00}", MainForm.calc.teor_chast_X[i]); // answ
+
+                    raspredX.Rows[i].Cells[7].Value = "↓";
+
+                }
+
+                int k = 0;
+                int j = 0;
+
+                int[,] masdef = new int[5, 7];
+                int[] answ = new int[5];
+                // raspredInitX.Rows[i].Cells[0].Value = (k + 1).ToString();
+                for (int i = 0; i < MainForm.calc.d_X; i++)
+                {
+                    int p = 0;
+                    //raspredInitX.Rows.Add();
+                    masdef[i, p++] = k;
+                    char count = MainForm.calc.flags_X[k];
+                    char step = (char)1;
+                    //raspredInitX.Rows[i].Cells[0].Value = (k + 1).ToString();
+
+                    while (count != 0)
+                    {
+                        masdef[i, p++] = k + step++;
+                        count--;
+                    }
+                    k += step;
+                    // j++;
+                }
+
+
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int t = 0; t < 6; t++)
+                    {
+                        // if ((masdef[i,t] != 0)&& (masdef[i,t+1] == 0))
+                        if (masdef[i, t + 1] == 0)
+                        {
+                            answ[i] = masdef[i, t];
+                            break;
+                        }
                     }
                 }
+
+                for (int i = 0; i < 5; i++)
+                {
+                    raspredX.Rows[answ[i]].Cells[7].Value = String.Format("{0:0.00}", MainForm.calc.dlya_stat_X[i]);
+
+                }
             }
+            else {
+                for (int i = 0; i < Program.r; i++)
+                {
+                    raspredX.Rows.Add();
 
-            for (int i = 0; i < 5; i++)
-            {
-                raspredX.Rows[answ[i]].Cells[7].Value = String.Format("{0:0.00}", MainForm.calc.dlya_stat_X[i]);
+                    raspredX.Rows[i].Cells[0].Value = i + 1; // i
 
+
+                    if (i == Program.r - 1)
+                    {
+                        raspredX.Rows[i].Cells[1].Value = "[" + MainForm.calc.inter_Y[i].getF() + ";" + "+∞" + ")";
+                    }
+                    else
+                        if (i == 0)
+                    {
+                        raspredX.Rows[i].Cells[1].Value = "(" + "-∞" + ";" + MainForm.calc.inter_Y[i].getS() + ")"; //interval
+                    }
+                    else
+                        raspredX.Rows[i].Cells[1].Value = "[" + MainForm.calc.inter_Y[i].getF() + ";" + MainForm.calc.inter_Y[i].getS() + ")";
+
+                    raspredX.Rows[i].Cells[2].Value = MainForm.calc.inter_Y[i].getN(); //Ni
+
+                    raspredX.Rows[i].Cells[3].Value = String.Format("{0:0.00}", MainForm.calc.norm_vel_Y[i]); // Zi
+
+                    raspredX.Rows[i].Cells[4].Value = String.Format("{0:0.000}", MainForm.calc.form_lap_Y[i]); // laplac
+
+                    raspredX.Rows[i].Cells[5].Value = String.Format("{0:0.000}", MainForm.calc.ver_sob_Y[i]); // pi     
+
+                    raspredX.Rows[i].Cells[6].Value = String.Format("{0:0.00}", MainForm.calc.teor_chast_Y[i]); // answ
+
+                    raspredX.Rows[i].Cells[7].Value = "↓";
+
+                }
+
+                int k = 0;
+                int j = 0;
+
+                int[,] masdef = new int[5, 7];
+                int[] answ = new int[5];
+                // raspredInitX.Rows[i].Cells[0].Value = (k + 1).ToString();
+                for (int i = 0; i < MainForm.calc.d_Y; i++)
+                {
+                    int p = 0;
+                    //raspredInitX.Rows.Add();
+                    masdef[i, p++] = k;
+                    char count = MainForm.calc.flags_Y[k];
+                    char step = (char)1;
+                    //raspredInitX.Rows[i].Cells[0].Value = (k + 1).ToString();
+
+                    while (count != 0)
+                    {
+                        masdef[i, p++] = k + step++;
+                        count--;
+                    }
+                    k += step;
+                    // j++;
+                }
+
+
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int t = 0; t < 6; t++)
+                    {
+                        // if ((masdef[i,t] != 0)&& (masdef[i,t+1] == 0))
+                        if (masdef[i, t + 1] == 0)
+                        {
+                            answ[i] = masdef[i, t];
+                            break;
+                        }
+                    }
+                }
+
+                for (int i = 0; i < 5; i++)
+                {
+                    raspredX.Rows[answ[i]].Cells[7].Value = String.Format("{0:0.00}", MainForm.calc.dlya_stat_Y[i]);
+
+                }
             }
-
-            double all_n = 0, all_teor_vel = 0;
+           // double all_n = 0, all_teor_vel = 0;
 
             /* for (int i = 0; i < MainForm.calc.d_X; i++)
              {

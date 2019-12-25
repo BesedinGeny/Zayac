@@ -140,5 +140,12 @@ namespace Zaychik
             Graphics grph = new Graphics(2, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
             grph.ShowDialog();
         }
+
+        private void button_hypothesis_Click(object sender, EventArgs e)
+        {
+            HipotesyX hipo = new HipotesyX();
+            hipo.doY = true;
+            hipo.ShowDialog();
+        }
     }
 }
