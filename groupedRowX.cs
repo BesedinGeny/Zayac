@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Zaychik;
 namespace Zaychik
 {
     public partial class groupedRowX : Form
@@ -157,6 +157,12 @@ namespace Zaychik
         private void button_confidenceIntervals_Click(object sender, EventArgs e)
         {
             inter.ShowDialog();
+        }
+
+        private void button_hypothesis_Click(object sender, EventArgs e)
+        {
+            HipotesyX f = new HipotesyX();
+            f.ShowDialog();
         }
     }
 }

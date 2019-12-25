@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Globalization;
 
 namespace Zaychik
 {
@@ -64,7 +65,7 @@ namespace Zaychik
                 string[] s = textFromFile.Split('\n');
                 string[] s1 = s[k - 1].Split('\t');
                 string chislo = s1[index_p];
-                double x = Convert.ToDouble(chislo);
+                double x = Convert.ToDouble(chislo, new CultureInfo("en-us"));
                 return x;
             }
         }
@@ -118,7 +119,7 @@ namespace Zaychik
                 string textFromFile = System.Text.Encoding.Default.GetString(array);
                 string[] s = textFromFile.Split('\n');
                 string[] s1 = s[k - 1].Split(' ');
-                double x = Convert.ToDouble(s1[index_p]);
+                double x = Convert.ToDouble(s1[index_p], new CultureInfo("en-us"));
                 return x;
             }
         }

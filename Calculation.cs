@@ -7,7 +7,7 @@ using System.IO;
 using System.Data;
 using System.Windows.Forms;
 using System.Drawing;
-
+using System.Globalization;
 
 namespace Zaychik
 {
@@ -186,8 +186,8 @@ namespace Zaychik
 
             lap = (1 / (Math.Sqrt(2 * Math.PI)));
             hi_a = 0;
-            flags_X = new char[Program.r - 1] { (char)0, (char)0, (char)0, (char)0, (char)0, (char)0 };
-            flags_Y = new char[Program.r - 1] { (char)0, (char)0, (char)0, (char)0, (char)0, (char)0 };
+            flags_X = new char[Program.r ] { (char)0, (char)0, (char)0, (char)0, (char)0, (char)0, (char)0 };
+            flags_Y = new char[Program.r ] { (char)0, (char)0, (char)0, (char)0, (char)0, (char)0, (char)0 };
             count = 0;
             Sum_count = 0;
             uv = 0;
@@ -259,7 +259,7 @@ namespace Zaychik
                 string textFromFile = System.Text.Encoding.Default.GetString(array);
                 string[] s = textFromFile.Split('\n');
                 string[] s1 = s[k - 1].Split(' ');
-                double x = Convert.ToDouble(s1[index_p]);
+                double x = Convert.ToDouble(s1[index_p], new CultureInfo("en-us"));
                 return x;
             }
         }
@@ -310,7 +310,7 @@ namespace Zaychik
                 string[] s = textFromFile.Split('\n');
                 string[] s1 = s[k - 1].Split('\t');
                 string chislo = s1[index_p];
-                double x = Convert.ToDouble(chislo);
+                double x = Convert.ToDouble(chislo, new CultureInfo("en-us"));
                 return x;
             }
         }
@@ -823,8 +823,8 @@ namespace Zaychik
             d_X = Program.r - d_X;
             d_Y = Program.r - d_Y;
 
-            new_inter_X = new Intervals[d_X];
-            new_inter_Y = new Intervals[d_Y];
+            new_inter_X = new Intervals[d_X+ 1];
+            new_inter_Y = new Intervals[d_Y + 1];
 
             teor_vel_X = new double[d_X];
             teor_vel_Y = new double[d_Y];
@@ -923,8 +923,8 @@ namespace Zaychik
 
             //Вычисление хи-квадрат
             #region
-            dlya_stat_X = new double[d_X];
-            dlya_stat_Y = new double[d_Y];
+            dlya_stat_X = new double[d_X + 1];
+            dlya_stat_Y = new double[d_Y + 1];
 
             for (int j = 0; j < d_X; j++)
             {

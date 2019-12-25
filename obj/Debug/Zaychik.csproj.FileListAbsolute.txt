@@ -13,3 +13,19 @@ C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.groupedRowY.resources
 C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.pointEstimates.resources
 C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.confidenceIntervals.resources
 C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.Hipotesy.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\bin\Debug\Zaychik.exe.config
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\bin\Debug\Zaychik.exe
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\bin\Debug\Zaychik.pdb
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.csprojAssemblyReference.cache
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.confidenceIntervals.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.Graphics.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.groupedRowY.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.groupedRowX.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.Hipotesy.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.MainForm.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.pointEstimates.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.Properties.Resources.resources
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.csproj.GenerateResource.cache
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.exe
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.pdb
+C:\Users\BESEDIN\Desktop\папка\Лабы и проги\Besedin_branch\Zayac\obj\Debug\Zaychik.HipotesyX.resources

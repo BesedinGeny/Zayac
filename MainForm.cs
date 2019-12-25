@@ -26,6 +26,7 @@ namespace Zaychik
 
         public MainForm()
         {
+            
             InitializeComponent();
             //calc.setHiA(0.05);
             //calc.Calculate();
@@ -50,8 +51,10 @@ namespace Zaychik
                 {
                     st = Data[i].Split(' ');
 
-                    databaseX[i] = Convert.ToDouble(st[0]);
+                    databaseX[i] = Convert.ToDouble(st[0], new CultureInfo("en-us"));
                     databaseY[i] = Convert.ToInt32(st[1]);
+                    masX_temp[i] = databaseX[i];
+                    masY_temp[i] = databaseY[i];
                 }
 
                 int k = 0;
@@ -67,6 +70,9 @@ namespace Zaychik
             }
             else
                 this.toolStripStatusLabel1.Text = "Файл не открылся, попробуйте еще раз!";
+
+            calc.setHiA(0.05);
+            calc.Calculate();
         }
 
         private void групированнаяРядToolStripMenuItem_Click(object sender, EventArgs e)
