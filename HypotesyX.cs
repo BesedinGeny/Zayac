@@ -119,6 +119,18 @@ namespace Zaychik
                     raspredX.Rows[answ[i]].Cells[7].Value = String.Format("{0:0.00}", MainForm.calc.dlya_stat_X[i]);
 
                 }
+
+                //лэйблы
+
+                label8.Text = Convert.ToString(MainForm.calc.d_X);
+                label7.Text = Convert.ToString(MainForm.calc.step_svobodi_X);
+                label6.Text = String.Format("{0:0.00}", MainForm.calc.hi_vib_X);
+                //hi_vivod.Text = String.Format("{0:0.00}", MainForm.calc.hi_vib_X);
+                label10.Text = String.Format("{0:0.00}", MainForm.calc.quant_hi_X);
+                //svoboda.Text = "(" + Convert.ToString(MainForm.calc.step_svobodi_X) + ") =";
+                label5.Text = Convert.ToString(1 - MainForm.calc.hi_a);
+                //textBox1.Text = Convert.ToString(MainForm.calc.hi_a);
+
             }
             else {
                 for (int i = 0; i < Program.r; i++)
@@ -197,8 +209,23 @@ namespace Zaychik
                     raspredX.Rows[answ[i]].Cells[7].Value = String.Format("{0:0.00}", MainForm.calc.dlya_stat_Y[i]);
 
                 }
+
+                //лэйблы
+                label2.Text = "Y^2";
+                label3.Text = "Yв^2";
+                label9.Text = "Y(0.95)^2";
+                label8.Text = Convert.ToString(MainForm.calc.d_Y);
+                label7.Text = Convert.ToString(MainForm.calc.step_svobodi_Y);
+                label6.Text = String.Format("{0:0.00}", MainForm.calc.hi_vib_Y);
+                //hi_vivod.Text = String.Format("{0:0.00}", MainForm.calc.hi_vib_X);
+                label10.Text = String.Format("{0:0.00}", MainForm.calc.quant_hi_Y);
+                //svoboda.Text = "(" + Convert.ToString(MainForm.calc.step_svobodi_X) + ") =";
+                label5.Text = Convert.ToString(1 - MainForm.calc.hi_a);
+                //textBox1.Text = Convert.ToString(MainForm.calc.hi_a);
+
+
             }
-           // double all_n = 0, all_teor_vel = 0;
+            // double all_n = 0, all_teor_vel = 0;
 
             /* for (int i = 0; i < MainForm.calc.d_X; i++)
              {
@@ -267,6 +294,26 @@ namespace Zaychik
                  znak.Text = ">";
                  uslovie.Text = "противоречит";
              }*/
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
